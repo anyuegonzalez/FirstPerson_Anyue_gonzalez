@@ -15,8 +15,13 @@ public class FirstPerson : MonoBehaviour
     
     void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");
+        float h = Input.GetAxisRaw("Horizontal"); 
         float v = Input.GetAxisRaw("Vertical");
+
+        Vector3 movimiento = new Vector3(h, 0, v ).normalized;
+
+        controller.Move(movimiento * velocidadMovimiento * Time.deltaTime);
         
+
     }
 }
