@@ -9,6 +9,8 @@ public class FirstPerson : MonoBehaviour
     CharacterController controller;
     void Start()
     {
+        // bloquea el raton en el centro de la pantalla y lo oculta
+        Cursor.lockState = CursorLockMode.Locked;
        controller = GetComponent<CharacterController>();
     }
 
